@@ -43,7 +43,10 @@ export class HomeComponent implements OnInit {
   PlayGame() {
     console.log('Play Game!');
     this.disabled = true;
-    this.countDown();
+    this.ShuffleColorPack();
+    setTimeout(() => {
+      this.countDown();
+    }, 500);
   }
   stop() {
     this.clearTimer();
@@ -194,8 +197,6 @@ export class HomeComponent implements OnInit {
         const color: Color = new Color();
         color.background = this.colors[y];
         color.animate = false;
-        color.id = index;
-        color.selected = false;
         this.colorPack.push(color);
         this.randomArray.push(y);
       } else {
