@@ -1,0 +1,117 @@
+body {
+  background-color: #232323;
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+}
+
+.square {
+  width: auto;
+  height: 100px;
+  background: #d10000;
+  box-shadow: 0 5px 0 #d10000;
+  margin: 4.66%;
+  padding-bottom: 30%;
+  border-radius: 15%;
+  transition: background 0.6s ease-in-out;
+  -webkit-transition: background 0.6s ease-in-out;
+  -moz-transition: background 0.6s ease-in-out;
+}
+.square-animate {
+  box-shadow: 0 2px 0 #d10000;
+  transform: translateY(3px);
+}
+.square-selected {
+  background-color: white;
+  // border: gold 4px solid;
+  cursor: pointer;
+  -webkit-transition: background-color 0.5s ease-in-out 0.5s;
+  -moz-transition: background-color 0.5s ease-in-out 0.5s;
+  -o-transition: background-color 0.5s ease-in-out 0.5s;
+  transition: background-color 0.5s ease-in-out 0.5s;
+}
+
+.square-yellow {
+  background-color: #faeb2b;
+}
+.square-red {
+  background-color: #d10000;
+}
+.square-blue {
+  background-color: #440fa7;
+}
+.square-green {
+  background-color: #11945d;
+}
+
+#container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin: 20px auto;
+  max-width: 600px;
+}
+
+@media only screen and (min-width: 100px) and (max-width: 400px) {
+  #container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media only screen and (min-width: 930px) and (max-width: 1440px) {
+  h1 {
+    font-size: 75%;
+  }
+}
+
+h1 {
+  text-align: center;
+  line-height: 1.1;
+  font-size: 1rem;
+  font-weight: normal;
+  font-family: 'Lato', sans-serif;
+  color: white;
+  background: #0b113d;
+  margin: 0;
+  // text-transform: uppercase;
+  padding: 1.2rem 0;
+}
+
+#colorDisplay {
+  font-size: 200%;
+}
+
+#message {
+  display: inline-block;
+  width: 20%;
+}
+
+#stripe {
+  background: white;
+  height: 30px;
+  text-align: center;
+  color: black;
+}
+
+.selected {
+  color: white;
+  background: steelblue;
+}
+
+button {
+  border: 0;
+  background: #0b113d;
+  border-radius: 4px;
+  box-shadow: 0 5px 0 #0b113d;
+  font-family: 'Lato', sans-serif !important;
+  color: #fff;
+  cursor: pointer;
+  font: inherit;
+  margin: 0 auto;
+  display: block;
+  outline: 0;
+  padding: 12px 20px;
+  transition: all 0.1s linear;
+}
+button:active {
+  box-shadow: 0 2px 0 #0b113d;
+  transform: translateY(3px);
+}

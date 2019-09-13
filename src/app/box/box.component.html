@@ -1,0 +1,10 @@
+<div
+  class="square"
+  [ngClass]="{
+    'square-yellow': color.background === '#faeb2b',
+    'square-red': color.background === '#d10000',
+    'square-green': color.background === '#11945d',
+    'square-blue': color.background === '#440fa7',
+    'square-selected': color.animate === true
+  }"
+></div>

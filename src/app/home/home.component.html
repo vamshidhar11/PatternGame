@@ -1,0 +1,33 @@
+<h1>
+  {{ messages.message }}
+  <!-- <br />
+  <span id="colorDisplay">RGB</span>
+  <br />
+  Color Game -->
+</h1>
+<h1>Level {{ currentLevel }}</h1>
+
+<!-- <div id="stripe">
+  <button id="reset">New Colors</button>
+  <span id="message"></span>
+  <button class="mode">Easy</button>
+  <button class="mode selected">Hard</button>
+</div> -->
+
+<div id="container">
+  <app-box
+    *ngFor="let item of colorPack; let i = index"
+    [color]="item"
+    (click)="SelectSquare(i)"
+  ></app-box>
+</div>
+
+<!-- <a (click)="PlayGame()" *ngIf="!disabled" class="button2">Play</a> -->
+
+<button (click)="PlayGame()">Play Pattern</button>
+
+<!-- <h3>Countdown to Liftoff (via local variable)</h3>
+<button (click)="timer.start()">Start</button>
+<button (click)="timer.stop()">Stop</button>
+<div class="seconds">{{ timer.seconds }}</div>
+<app-box #timer></app-box> -->

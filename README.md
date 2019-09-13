@@ -2,9 +2,28 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.3.
 
+## Step1
+
+#Install Angular
+npm install -g @angular/cli
+
+## Step 2
+
+# Download Node and install Version 10x
+
+https://nodejs.org/en/
+
+## Step 3
+
+# npm install
+
+# Step 4
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+
+##
 
 ## Code scaffolding
 

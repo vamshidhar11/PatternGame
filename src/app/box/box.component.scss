@@ -1,0 +1,35 @@
+.square {
+  width: auto;
+  height: 6rem;
+  background-color: #d10000;
+  margin: 4.66%;
+  padding-bottom: 30%;
+  border-radius: 15%;
+  cursor: pointer;
+  -webkit-transition: background-color 0.5s ease-in-out;
+  -moz-transition: background-color 0.5s ease-in-out;
+  -o-transition: background-color 0.5s ease-in-out;
+  transition: background-color 0.5s ease-in-out;
+}
+.square-yellow {
+  background-color: #faeb2b;
+}
+.square-red {
+  background-color: #d10000;
+}
+.square-blue {
+  background-color: #440fa7;
+}
+.square-green {
+  background-color: #18c730cc;
+}
+
+.square-selected {
+  background-color: #faf5f4;
+  // border: gold 4px solid;
+  cursor: pointer;
+  -webkit-transition: background-color 0.5s ease-in-out 0.5s;
+  -moz-transition: background-color 0.5s ease-in-out 0.5s;
+  -o-transition: background-color 0.5s ease-in-out 0.5s;
+  transition: background-color 0.5s ease-in-out 0.5s;
+}
