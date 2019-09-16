@@ -158,33 +158,33 @@ export class HomeComponent implements OnInit {
    *
    */
   CheckSelectedPatternValidity(l) {
-      if (
-        JSON.stringify(this.playedPattern) ===
-          JSON.stringify(this.selectedPattern) &&
-        this.playedPattern.length !== 0 &&
-        this.selectedPattern.length !== 0
-      ) {
-        // tslint:disable-next-line:quotemark
-        this.messages.message = "Whoaa!! That's correct";
-        if (this.level === 11) {
-          console.log('Game Completed!');
-          this.messages.message = 'You have Great Memory!!';
-          this.level = 1;
-          this.currentLevel = 1;
-          this.playedPattern = new Array();
-        }
-        setTimeout(() => {
-          this.messages.message = 'Play Next Level';
-          this.level += 1;
-          this.currentLevel += 1;
-          this.counter = 0;
-          this.selectedPattern = new Array();
-          this.playedPattern = new Array();
-          this.disabled = false;
-        }, 1000);
-      } else {
+    if (
+      JSON.stringify(this.playedPattern) ===
+        JSON.stringify(this.selectedPattern) &&
+      this.playedPattern.length !== 0 &&
+      this.selectedPattern.length !== 0
+    ) {
+      // tslint:disable-next-line:quotemark
+      this.messages.message = "Whoaa!! That's correct";
+      if (this.level === 11) {
+        console.log('Game Completed!');
+        this.messages.message = 'You have Great Memory!!';
+        this.level = 1;
+        this.currentLevel = 1;
         this.playedPattern = new Array();
       }
+      setTimeout(() => {
+        this.messages.message = 'Play Next Level';
+        this.level += 1;
+        this.currentLevel += 1;
+        this.counter = 0;
+        this.selectedPattern = new Array();
+        this.playedPattern = new Array();
+        this.disabled = false;
+      }, 1000);
+    } else {
+      this.selectedPattern = new Array();
+    }
   }
   /**
    * Color pattern is Shuffled every new Game.
