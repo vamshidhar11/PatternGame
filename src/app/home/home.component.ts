@@ -142,6 +142,7 @@ export class HomeComponent implements OnInit {
       console.log('Incorrect!!');
       this.messages.message = 'Incorrect!! Keep Trying';
       this.selectedPattern = new Array();
+      this.counter = 0;
       setTimeout(() => {
         this.messages.message = 'Play the pattern';
         this.disabled = false;
