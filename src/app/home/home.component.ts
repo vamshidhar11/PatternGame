@@ -130,6 +130,7 @@ export class HomeComponent implements OnInit {
    */
   SelectSquare(index) {
     console.log(index + 1);
+    console.log(this.counter);
     const c = index + 1;
     const l = this.playedPattern.length;
     if (this.playedPattern[this.counter] === c) {
