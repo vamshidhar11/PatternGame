@@ -158,9 +158,6 @@ export class HomeComponent implements OnInit {
    *
    */
   CheckSelectedPatternValidity(l) {
-    if (this.counter === l) {
-      console.log(this.playedPattern);
-      console.log(this.selectedPattern);
       if (
         JSON.stringify(this.playedPattern) ===
           JSON.stringify(this.selectedPattern) &&
@@ -174,6 +171,7 @@ export class HomeComponent implements OnInit {
           this.messages.message = 'You have Great Memory!!';
           this.level = 1;
           this.currentLevel = 1;
+          this.playedPattern = new Array();
         }
         setTimeout(() => {
           this.messages.message = 'Play Next Level';
@@ -184,8 +182,9 @@ export class HomeComponent implements OnInit {
           this.playedPattern = new Array();
           this.disabled = false;
         }, 1000);
+      } else {
+        this.playedPattern = new Array();
       }
-    }
   }
   /**
    * Color pattern is Shuffled every new Game.
